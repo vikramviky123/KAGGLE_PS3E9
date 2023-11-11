@@ -28,3 +28,4 @@ concrete/*
 artifacts/*
 logs/*
 research/*
+.dvc/*
