@@ -1,3 +1,13 @@
+Metadata-Version: 2.1
+Name: concrete-strength
+Version: 0.0.0
+Summary: Python package for mlflow
+Home-page: https://github.com/vikramviky123/KAGGLE_PS3E9
+Author: vikramviky123
+Author-email: vikram_viky2001@yahoo.com
+Project-URL: Bug Tracker, https://github.com/vikramviky123/KAGGLE_PS3E9/issues
+License-File: LICENSE
+
 # KAGGLE_PS3E9
 Concrete Strength - kaggle playground series s3e9
 
