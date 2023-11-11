@@ -7,3 +7,11 @@ stages:
     outs:
       - artifacts/data_ingestion/downloaded
       - artifacts/data_ingestion/extracted
+  data_transformation:
+    cmd: python src/concrete_strength/e_pipeline/stg_01_data_transformation.py
+    deps:
+      - src/concrete_strength/e_pipeline/stg_01_data_transformation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/extracted
+    outs:
+      - artifacts/data_transformation

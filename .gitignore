@@ -28,8 +28,3 @@ concrete/*
 artifacts/*
 logs/*
 research/*
-.dvc/*
-.dvc/
-dvc.lock/*
-dvc.lock
-.dvc

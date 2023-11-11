@@ -8,3 +8,8 @@ data_ingestion:
   extracted_dir: artifacts/data_ingestion/extracted
   file_path_syn: artifacts/data_ingestion/downloaded/concrete_strength_syn.zip
   file_path_act: artifacts/data_ingestion/downloaded/concrete_strength_act.zip
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path_syn: artifacts/data_ingestion/extracted/train.csv
+  data_path_act: artifacts/data_ingestion/extracted/ConcreteStrengthData.csv

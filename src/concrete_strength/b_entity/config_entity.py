@@ -16,7 +16,8 @@ class DataIngestionConfig:
 @dataclass(frozen=True)
 class DataTransformationConfig:
     root_dir: Path
-    data_path: Path
+    data_path_syn: Path
+    data_path_act: Path
 
 
 @dataclass(frozen=True)
