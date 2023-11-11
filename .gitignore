@@ -25,4 +25,11 @@ TestResults.xml
 concrete/*
 
 #others
+artifacts/*
+logs/*
 research/*
+.dvc/*
+.dvc/
+dvc.lock/*
+dvc.lock
+.dvc

@@ -22,19 +22,21 @@ def get_requirements(file_path: str) -> List[str]:
     return requirements
 
 
+SRC_REPO = "concrete_strength"
 __VERSION__ = "0.0.0"
 
-REPO_NAME = "KAGGLE_PS3E9"
 AUTHOR_USER_NAME = "vikramviky123"
-SRC_REPO = "concrete_strength"
 AUTHOR_EMAIL = "vikram_viky2001@yahoo.com"
 
+REPO_NAME = "KAGGLE_PS3E9"
 
 setup(
     name=SRC_REPO,
     version=__VERSION__,
+
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
+
     description="Python package for mlflow",
     long_description=long_description,
 
@@ -42,7 +44,9 @@ setup(
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
+
     package_dir={"": "src"},
     packages=find_packages(where="src"),
+
     install_requires=get_requirements('requirements.txt')
 )
