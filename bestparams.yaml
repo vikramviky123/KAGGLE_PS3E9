@@ -1,0 +1,34 @@
+histgradient_boost:
+  learning_rate: 0.026508319593078863
+  max_bins: 245
+  max_depth: 5
+  max_iter: 880
+  min_samples_leaf: 4
+  tol: 0.00028771737693421946
+lgbm_regressor:
+  boosting_type: dart
+  colsample_bytree: 0.7
+  learning_rate: 0.02752445422114368
+  max_depth: null
+  min_child_samples: 100
+  n_estimators: 1940
+  num_leaves: 78
+  objective: rmse
+  subsample: 0.9
+  verbose: -1
+random_forest:
+  max_depth: 5
+  min_samples_leaf: 4
+  min_samples_split: 4
+  n_estimators: 1600
+xgb_regressor:
+  booster: gbtree
+  colsample_bytree: 0.9
+  learning_rate: 0.005389311881599907
+  max_bin: 135
+  max_depth: 5
+  max_leaves: 45
+  n_estimators: 1420
+  objective: reg:squarederror
+  subsample: 0.4
+  tree_method: hist

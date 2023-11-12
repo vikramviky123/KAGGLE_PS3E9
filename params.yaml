@@ -1,56 +1,50 @@
-random_forest:
+lgbm_regressor:
+  objective:
+    type: categorical
+    choices: [rmse]
+
+  boosting_type:
+    type: categorical
+    choices: [gbdt, dart]
+
   n_estimators:
     type: int
     low: 800
     high: 2000
     step: 20
 
-  max_depth:
-    type: categorical
-    choices: [null, 3, 5, 7]
-
-  min_samples_split:
-    type: int
-    low: 2
-    high: 5
-
-  min_samples_leaf:
-    type: int
-    low: 1
-    high: 5
-
-histgradient_boost:
   learning_rate:
     type: float
-    low: 0.0001
+    low: 0.001
     high: 0.1
 
-  max_iter:
+  num_leaves:
     type: int
-    low: 800
-    high: 2000
-    step: 20
+    low: 31
+    high: 100
+    step: 1
 
   max_depth:
     type: categorical
     choices: [null, 3, 5, 7]
 
-  min_samples_leaf:
+  min_child_samples:
     type: int
-    low: 1
-    high: 5
-    step: 1
-
-  max_bins:
-    type: int
-    low: 50
-    high: 255
+    low: 20
+    high: 100
     step: 5
 
-  tol:
-    type: float
-    low: 0.000001
-    high: 0.1
+  subsample:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  colsample_bytree:
+    type: categorical
+    choices: [0.4, 0.5, 0.7, 0.9]
+
+  verbose:
+    type: categorical
+    choices: [-1]
 
 xgb_regressor:
   objective:
@@ -100,46 +94,56 @@ xgb_regressor:
     high: 255
     step: 5
 
-lgbm_regressor:
-  objective:
-    type: categorical
-    choices: [rmse]
+histgradient_boost:
+  learning_rate:
+    type: float
+    low: 0.0001
+    high: 0.1
 
-  boosting_type:
-    type: categorical
-    choices: [gbdt, dart]
+  max_iter:
+    type: int
+    low: 800
+    high: 2000
+    step: 20
 
+  max_depth:
+    type: categorical
+    choices: [null, 3, 5, 7]
+
+  min_samples_leaf:
+    type: int
+    low: 1
+    high: 5
+    step: 1
+
+  max_bins:
+    type: int
+    low: 50
+    high: 255
+    step: 5
+
+  tol:
+    type: float
+    low: 0.000001
+    high: 0.1
+
+random_forest:
   n_estimators:
     type: int
     low: 800
     high: 2000
     step: 20
 
-  learning_rate:
-    type: float
-    low: 0.001
-    high: 0.1
-
-  num_leaves:
-    type: int
-    low: 31
-    high: 100
-    step: 1
-
   max_depth:
     type: categorical
     choices: [null, 3, 5, 7]
 
-  min_child_samples:
+  min_samples_split:
     type: int
-    low: 20
-    high: 100
-    step: 5
+    low: 2
+    high: 5
 
-  subsample:
-    type: categorical
-    choices: [0.4, 0.5, 0.7, 0.9]
-
-  colsample_bytree:
-    type: categorical
-    choices: [0.4, 0.5, 0.7, 0.9]
+  min_samples_leaf:
+    type: int
+    low: 1
+    high: 5

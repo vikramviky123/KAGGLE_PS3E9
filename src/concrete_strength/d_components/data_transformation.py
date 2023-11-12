@@ -23,15 +23,17 @@ class DataTransformation:
             RANDOM_STATE = read_yaml(
                 GLOBALPARAMS_FILE_PATH).globalparams.RANDOM_STATE
             df_syn = pd.read_csv(self.config.data_path_syn)
+            df_syn.drop('id', axis=1, inplace=True)
             df_act = pd.read_csv(self.config.data_path_act)
             # Maintaining same column names across dataset
-            df_act.columns = ['CementComponent', 'BlastFurnaceSlag', 'FlyAshComponent',
-                              'WaterComponent', 'SuperplasticizerComponent',
-                              'CoarseAggregateComponent', 'FineAggregateComponent', 'AgeInDays',
-                              'Strength']
+            columns_ = ['CementComponent', 'BlastFurnaceSlag', 'FlyAshComponent',
+                        'WaterComponent', 'SuperplasticizerComponent',
+                        'CoarseAggregateComponent', 'FineAggregateComponent', 'AgeInDays',
+                        'Strength']
+            df_act.columns = columns_
             # Merging both datasets
             df = pd.concat([df_syn, df_act], axis=0)
-            df = df.reset_index(drop=True)
+            df.reset_index(drop=True, inplace=True)
 
             # Dropping the duplicates & restting index
             df.drop_duplicates(inplace=True)

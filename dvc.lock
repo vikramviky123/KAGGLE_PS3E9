@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 1fc262a3144e783ad4702a4e773d3df1
-      size: 2083
+      md5: af8bb9ae902de2a573ef28925c853ff6
+      size: 2313
     - path: src/concrete_strength/e_pipeline/stg_01_data_ingestion.py
       hash: md5
       md5: d32c5a96a7bbf0ca9b1e1a948e447fee
@@ -32,8 +32,8 @@ stages:
       nfiles: 4
     - path: config/config.yaml
       hash: md5
-      md5: 1fc262a3144e783ad4702a4e773d3df1
-      size: 2083
+      md5: af8bb9ae902de2a573ef28925c853ff6
+      size: 2313
     - path: src/concrete_strength/e_pipeline/stg_02_data_transformation.py
       hash: md5
       md5: c843f7bfd2815f94012f9242cf0acf7f
@@ -41,6 +41,36 @@ stages:
     outs:
     - path: artifacts/data_transformation
       hash: md5
-      md5: 6eea0a44854f5ba39327cd5cfe309cc3.dir
-      size: 342798
+      md5: aaa82b901bd433b5dd05f3e1a7a1eb36.dir
+      size: 305048
       nfiles: 2
+  model_trainer:
+    cmd: python src/concrete_strength/e_pipeline/stg_03_model_training.py
+    deps:
+    - path: artifacts/data_transformation
+      hash: md5
+      md5: aaa82b901bd433b5dd05f3e1a7a1eb36.dir
+      size: 305048
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: af8bb9ae902de2a573ef28925c853ff6
+      size: 2313
+    - path: globalparams.yaml
+      hash: md5
+      md5: 65f69487e8b1fd43bf076fa7e4491ef1
+      size: 65
+    - path: params.yaml
+      hash: md5
+      md5: 440da794e60bfc0ce691a9fdea393edc
+      size: 2181
+    - path: src/concrete_strength/e_pipeline/stg_03_model_training.py
+      hash: md5
+      md5: 8be9f07f94775043ff6b39ba5c048831
+      size: 1251
+    outs:
+    - path: artifacts/model_trainer
+      hash: md5
+      md5: cfe6f9e8b4906dad4ed67cfd9b36eb61.dir
+      size: 96104599
+      nfiles: 3
