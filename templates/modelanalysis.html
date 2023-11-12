@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <div id="model">
+    <h1>Model Analysis</h1>
+
+    <div class="content">
+        <h2>1. Ensemble of 4 Models for Training</h2>
+        <p>Training involves the use of four different models for regression:</p>
+        <ul>
+            <li>Random Forest Regression</li>
+            <li>Historical Gradient Boosting Machine Regression</li>
+            <li>XGBoost Regression</li>
+            <li>LightGBM Regression</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>2. Model Training</h2>
+        <p>Model training is performed using k-fold cross-validation with 5 splits. The average of predicted values is computed to evaluate the model's performance.</p>
+    </div>
+
+    <div class="content">
+        <h2>3. Metrics Chosen</h2>
+        <p>The following metrics are chosen to assess model performance:</p>
+        <ul>
+            <li>R-squared (R2)</li>
+            <li>Mean Squared Error (MSE)</li>
+            <li>Mean Absolute Error (MAE)</li>
+            <li>Root Mean Squared Error (RMSE)</li>
+        </ul>
+    </div>
+
+    <div class="content">
+    <h2>4. Results</h2>
+    <table class="results-table">
+        <tr>
+            <th>Model</th>
+            <th>Validation (R2, MAE, MSE, RMSE)</th>
+            <th>Test (R2, MAE, MSE, RMSE)</th>
+        </tr>
+        <tr>
+            <td>lgbm_regressor</td>
+            <td>0.478, 9.016, 141.925, 11.541</td>
+            <td>0.469, 8.742, 133.194, 11.908</td>
+        </tr>
+        <tr>
+            <td>xgb_regressor</td>
+            <td>0.490, 8.969, 138.713, 11.417</td>
+            <td>0.481, 8.712, 130.341, 11.773</td>
+        </tr>
+        <tr>
+            <td>histgradient_boost</td>
+            <td>0.456, 9.229, 148.037, 11.732</td>
+            <td>0.452, 8.955, 137.656, 12.164</td>
+        </tr>
+        <tr>
+            <td>random_forest</td>
+            <td>0.483, 9.098, 140.597, 11.581</td>
+            <td>0.466, 8.899, 134.131, 11.853</td>
+        </tr>
+    </table>
+</div>
+
+<h2>Best Model for R2 Score: xgb_regressor (0.490)</h2><br>    
+<h2>Best Model for MAE Score: xgb_regressor (8.969)</h2><br>
+<h2>Best Model for MSE Score: xgb_regressor (138.713)</h2><br>
+<h2>Best Model for RMSE Score: xgb_regressor (11.417)</h2><br>
+<h2><span class="highlight-yellow">Going Forward with XGBoost Regressor</span></h2>
+
+
+</div>
+
+{% endblock %}

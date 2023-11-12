@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+   <div id="model">
+    <h1>Model Plots</h1>
+
+    
+    
+    <div class="content">
+        <h2>1. Post Processing</h2>
+        <p>Post-processing involves regression plots and error plots of XGBoost Regressor </p>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Reg_and_dist_plot for xgb_regressor.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='model_plots/Error_plot for xgb_regressor.jpg') }}" alt="MyOnlineMeal.com">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

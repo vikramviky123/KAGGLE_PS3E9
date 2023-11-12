@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+   <!-- This is Welcome section ---------------------------------->
+<div id="uni">
+    <div>
+        <h1>Univariate Analysis</h1>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/CementComponent.jpg') }}" alt="Fixed Acidity Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/BlastFurnaceSlag.jpg') }}" alt="Volatile Acidity Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/FlyAshComponent.jpg') }}" alt="Citric Acid Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/WaterComponent.jpg') }}" alt="Residual Sugar Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/SuperplasticizerComponent.jpg') }}" alt="Chlorides Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/CoarseAggregateComponent.jpg') }}" alt="Free Sulfur Dioxide Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/FineAggregateComponent.jpg') }}" alt="Total Sulfur Dioxide Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/AgeInDays.jpg') }}" alt="Density Distribution Plot">
+        </div>
+        <div id="hist">
+            <img src="{{ url_for('static', filename='plots/dist_plots/Strength.jpg') }}" alt="pH Distribution Plot">
+        </div>
+  
+    </div>
+
+   <!-- Summary Section -->
+   <div id="summary">
+       <h2>Summary of Univariate Analysis</h2>
+
+       <div class="summary-section">
+           <h3>Descriptive</h3>
+           <ul>
+               <li>The data has ordinal and continuous data.</li>
+               <li>Strength is in the range of min value = 1 and max value = 85.</li>
+               <li>Distributions are skewed.</li>
+           </ul>
+       </div>
+
+       <div class="summary-section">
+           <h3>Univariate</h3>
+           <ul>
+               <li>All distributions are not Normal.</li>
+               <li>Outliers were present and were only mild.</li>
+           </ul>
+       </div>
+   </div>
+</div>
+
+{% endblock %}

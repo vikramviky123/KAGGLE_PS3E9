@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1>Bivariate Analysis</h1>
+    <h2>Pair Plot</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/pairplot.jpg') }}" alt="Pair Plot Bivariate Analysis">
+    </div>
+    <br>
+    <h2>Correlation Plot Spearman</h2>
+    <div id="hist">
+        <img src="{{ url_for('static', filename='plots/bi_plots/Correlation Plot_spearman.jpg') }}" alt="Correlation Plot (Spearman) Bivariate Analysis">
+    </div>
+  
+    <div id="summary">
+        <h2>Summary of Bivariate Analysis</h2>
+    
+        <div class="summary-section">
+            <h3>SuperplasticizerComponent ---- > FlyAshComponent</h3>
+            <ul>
+                <li>SuperplasticizerComponent has a strong positive correlation with FlyAshComponent.</li>
+            </ul>
+            <h3>SuperplasticizerComponent ---- > WaterComponent</h3>
+            <ul>
+                <li>SuperplasticizerComponent has a strong negative correlation with WaterComponent.</li>
+            </ul>
+        </div>
+    
+        <div class="summary-section">
+            <h3>Strength and AgeInDays</h3>
+            <ul>
+                <li>Strength has a strong positive correlation with AgeInDays.</li>
+            </ul>
+        </div>
+    
+        <div class="summary-section">
+            <h3>Correlation</h3>
+            <ul>
+                <li>`Moderate correlation` between independant variables, and also mild `nonlinear` negative relation ship with target variable `Strength`..</li>
+                </ul>
+        </div>
+    </div>
+
+{% endblock %}

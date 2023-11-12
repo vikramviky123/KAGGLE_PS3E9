@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- This is Welcome section ---------------------------------->
+    <h1> Concrete Strength Prediction</h1>
+    <section id="Intro">
+
+        <h1 class="h-primary"><span>Welcome to Concrete Strength Prediction</span></h1>
+
+        <p>
+            The dataset for this exercise is a concrete strength prediction dataset, and our goal is to predict the target variable `Strength` based on various components and characteristics of the concrete mix.
+        </p>
+
+    </section>
+
+    <section id="Intro">
+
+        <h1><span>Context:</span></h1>
+        <p>
+            Concrete strength is a critical factor in construction, influencing the durability and performance of structures. This dataset contains information about different components used in concrete mixing and their impact on the concrete's strength. Our objective is to predict the concrete strength based on these factors.
+        </p>
+
+    </section>
+
+    <section id="Intro">
+
+        <p>The dataset includes the following independent variables:</p>
+
+        <h2 class="h-secondary"><span>Independent Variables:</span></h2>
+
+        <ul class="data-list">
+            <li>CementComponent&nbsp&nbsp&nbsp&nbsp: The amount of cement in the concrete mix.</li>
+            <li>BlastFurnaceSlag&nbsp&nbsp&nbsp&nbsp          : The content of blast furnace slag in the concrete mix.</li>
+            <li>FlyAshComponent &nbsp&nbsp&nbsp&nbsp          : The content of fly ash in the concrete mix.</li>
+            <li>WaterComponent &nbsp&nbsp&nbsp&nbsp           : The amount of water in the concrete mix.</li>
+            <li>SuperplasticizerComponent&nbsp&nbsp&nbsp&nbsp : The content of superplasticizer in the concrete mix.</li>
+            <li>CoarseAggregateComponent&nbsp&nbsp&nbsp&nbsp  : The content of coarse aggregate in the concrete mix.</li>
+            <li>FineAggregateComponent&nbsp&nbsp&nbsp&nbsp    : The content of fine aggregate in the concrete mix.</li>
+            <li>AgeInDays&nbsp&nbsp&nbsp&nbsp               : The age of the concrete in days.</li>
+        </ul>
+
+        <h2 class="h-secondary"><span>Target Variable:</span></h2>
+        <p><strong>Strength:</strong> The compressive strength of the concrete.</p>
+
+        <h2 class="h-secondary"><span>Metrics:</span></h2>
+        <p>You can evaluate the model using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html" target="_blank">Mean Absolute Error (MAE)</a> metric.</p>
+    </section>
+
+{% endblock %}

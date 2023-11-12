@@ -32,6 +32,7 @@ list_of_files = [
     'globalparams.yaml',
     'requirements.txt',
     'setup.py',
+    'app.py',
     'main.py'
 ]
 
