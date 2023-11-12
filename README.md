@@ -63,19 +63,19 @@ This the website, which helps to track experiments remotely
 https://dagshub.com/vikramviky123/reg_wine_quality
 
 # Experiment tracking data from dagshub.com (from the connected repository)
-MLFLOW_TRACKING_URI=https://dagshub.com/vikramviky123/reg_wine_quality.mlflow \
+MLFLOW_TRACKING_URI=https://dagshub.com/vikramviky123/KAGGLE_PS3E9.mlflow \
 MLFLOW_TRACKING_USERNAME=vikramviky123 \
 MLFLOW_TRACKING_PASSWORD=5a2f68ea5e0aec2c756d6c161922b40f4e682d32 \
 python script.py
 
 ```bash
-export MLFLOW_TRACKING_URI=https://dagshub.com/vikramviky123/reg_wine_quality.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/vikramviky123/KAGGLE_PS3E9.mlflow
 export MLFLOW_TRACKING_USERNAME=vikramviky123
 export MLFLOW_TRACKING_PASSWORD=5a2f68ea5e0aec2c756d6c161922b40f4e682d32
 ```
 
 # Find my experiments here
-https://dagshub.com/vikramviky123/reg_wine_quality/experiments/#/
+https://dagshub.com/vikramviky123/KAGGLE_PS3E9/experiments/#/
 
 # run python app.py 
 

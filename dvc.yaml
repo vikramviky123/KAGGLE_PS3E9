@@ -15,13 +15,10 @@ stages:
       - artifacts/data_ingestion/extracted
     outs:
       - artifacts/data_transformation
-  model_trainer:
-    cmd: python src/concrete_strength/e_pipeline/stg_03_model_training.py
+  model_eval:
+    cmd: python src/concrete_strength/e_pipeline/stg_04_model_eval.py
     deps:
-      - src/concrete_strength/e_pipeline/stg_03_model_training.py
+      - src/concrete_strength/e_pipeline/stg_04_model_eval.py
       - config/config.yaml
-      - params.yaml
-      - globalparams.yaml
-      - artifacts/data_transformation
-    outs:
+      - bestparams.yaml
       - artifacts/model_trainer
