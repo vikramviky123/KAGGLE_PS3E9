@@ -30,3 +30,5 @@ logs/*
 research/*
 .dvc/*
 mlruns/*
+
+con.pbix

@@ -116,7 +116,7 @@ p {
 #Intro::before {
     content: "";
     background: url(/static/img/background_img.jpg) no-repeat center center/cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -145,6 +145,18 @@ p {
 .data-list li strong {
     display: inline-block;
     width: 100px;
+}
+
+#data-summary::before {
+    content: "";
+    background: url(/static/img/background_img.jpg) no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 /* Data Summary */
@@ -342,17 +354,40 @@ p {
 /* Predict ------ */
 /* CSS for styling the form */
 .form {
-    max-width: 400px;
+
+    width: 65%;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--accent-color);
+    background-color: rgb(213, 255, 224);
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
 }
 
-.form-group {
-    margin: 10px 0;
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+
 }
+
+.form-column {
+    flex: 1;
+    margin-right: 10px;
+    /* Adjust as needed to create space between columns */
+}
+
+.form-group {
+    margin-bottom: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* Adjust as needed to create space between input groups */
+}
+
+/* .form-group {
+    margin: 10px 0;
+} */
 
 .form label {
     display: block;

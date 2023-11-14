@@ -13,7 +13,7 @@ The Project is mainly prepared and executed to learn
 # How to use the rep
 1. Clone the repository
 ```bash
-https://github.com/vikramviky123/reg_wine_quality
+https://github.com/vikramviky123/KAGGLE_PS3E9
 ```
 2. Create environment using
 ```bash
@@ -60,7 +60,7 @@ mlflow can track parameters, metric and loss results etc
 
 # Dagshub
 This the website, which helps to track experiments remotely
-https://dagshub.com/vikramviky123/reg_wine_quality
+https://dagshub.com/vikramviky123/KAGGLE_PS3E9
 
 # Experiment tracking data from dagshub.com (from the connected repository)
 MLFLOW_TRACKING_URI=https://dagshub.com/vikramviky123/KAGGLE_PS3E9.mlflow \
@@ -106,10 +106,7 @@ I am attaching snapshot of each page
 ![Alt text](image-8.png)
 
 ## Prediction
-![Alt text](image-1.png)
-
-![Alt text](image-2.png)
-
+![Alt text](image-9.png)
 
 ## validating predictions from 3_evaluation_res.ipynb
 ![Alt text](image.png)

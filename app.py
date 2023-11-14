@@ -103,7 +103,7 @@ def predict():
         preds_mean = sum(preds) / len(preds)
         print(preds_mean)
 
-        return render_template('predict.html', predicted_concrete_strength=preds_mean)
+        return render_template('predict.html', predicted_concrete_strength=preds_mean[0])
 
     except Exception as e:
         return render_template('predict.html', error_message=str(e))

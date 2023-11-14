@@ -8,46 +8,53 @@
    <form action="/predict" method="post" class="form">
     <!-- Other form elements... -->
 
-    <div class="form-group">
-        <label for="CementComponent">Cement Component:</label>
-        <input type="text" id="CementComponent" name="CementComponent" placeholder="Cement Component 251.4">
-    </div>
+    <div class="form-columns">
+        <!-- Column 1 -->
+        <div class="form-column">
+            <div class="form-group">
+                <label for="CementComponent">Cement Component:</label>
+                <input type="text" id="CementComponent" name="CementComponent" placeholder="Cement Component 251.4">
+            </div>
 
-    <div class="form-group">
-        <label for="BlastFurnaceSlag">Blast Furnace Slag:</label>
-        <input type="text" id="BlastFurnaceSlag" name="BlastFurnaceSlag" placeholder="Blast Furnace Slag 0.0">
-    </div>
+            <div class="form-group">
+                <label for="BlastFurnaceSlag">Blast Furnace Slag:</label>
+                <input type="text" id="BlastFurnaceSlag" name="BlastFurnaceSlag" placeholder="Blast Furnace Slag 0.0">
+            </div>
 
-    <div class="form-group">
-        <label for="FlyAshComponent">Fly Ash Component:</label>
-        <input type="text" id="FlyAshComponent" name="FlyAshComponent" placeholder="Fly Ash Component 118.3">
-    </div>
+            <div class="form-group">
+                <label for="FlyAshComponent">Fly Ash Component:</label>
+                <input type="text" id="FlyAshComponent" name="FlyAshComponent" placeholder="Fly Ash Component 118.3">
+            </div>
 
-    <div class="form-group">
-        <label for="WaterComponent">Water Component:</label>
-        <input type="text" id="WaterComponent" name="WaterComponent" placeholder="Water Component 188.5">
+            <div class="form-group">
+                <label for="WaterComponent">Water Component:</label>
+                <input type="text" id="WaterComponent" name="WaterComponent" placeholder="Water Component 188.5">
+            </div>
+        </div>
     </div>
+        <!-- Column 2 -->
+        <div class="form-column">
+            <div class="form-group">
+                <label for="SuperplasticizerComponent">Superplasticizer Component:</label>
+                <input type="text" id="SuperplasticizerComponent" name="SuperplasticizerComponent" placeholder="Superplasticizer Component 5.3">
+            </div>
 
-    <div class="form-group">
-        <label for="SuperplasticizerComponent">Superplasticizer Component:</label>
-        <input type="text" id="SuperplasticizerComponent" name="SuperplasticizerComponent" placeholder="Superplasticizer Component 5.3">
+            <div class="form-group">
+                <label for="CoarseAggregateComponent">Coarse Aggregate Component:</label>
+                <input type="text" id="CoarseAggregateComponent" name="CoarseAggregateComponent" placeholder="Coarse Aggregate Component 1028.4">
+            </div>
+
+            <div class="form-group">
+                <label for="FineAggregateComponent">Fine Aggregate Component:</label>
+                <input type="text" id="FineAggregateComponent" name="FineAggregateComponent" placeholder="Fine Aggregate Component 757.7">
+            </div>
+
+            <div class="form-group">
+                <label for="AgeInDays">Age In Days:</label>
+                <input type="text" id="AgeInDays" name="AgeInDays" placeholder="Age In Days 100">
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="CoarseAggregateComponent">Coarse Aggregate Component:</label>
-        <input type="text" id="CoarseAggregateComponent" name="CoarseAggregateComponent" placeholder="Coarse Aggregate Component 1028.4">
-    </div>
-
-    <div class="form-group">
-        <label for="FineAggregateComponent">Fine Aggregate Component:</label>
-        <input type="text" id="FineAggregateComponent" name="FineAggregateComponent" placeholder="Fine Aggregate Component 757.7">
-    </div>
-
-    <div class="form-group">
-        <label for="AgeInDays">Age In Days:</label>
-        <input type="text" id="AgeInDays" name="AgeInDays" placeholder="Age In Days 100">
-    </div>
-
 
     <input type="submit" value="Predict Concrete Strength">
 </form>
